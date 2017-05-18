@@ -928,7 +928,7 @@ Goods.prototype.getRMB = <span class="hljs-function"><span class="hljs-keyword">
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Book</span>(<span class="hljs-params">name,writer,price</span>)</span>{
     <span class="hljs-comment">// &#x8C03;&#x7528;&#x7236;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
-    Goods.call(<span class="hljs-keyword">this</span>);  
+    Goods.call(<span class="hljs-keyword">this</span>,name);  
     <span class="hljs-keyword">this</span>.name=name;
     <span class="hljs-keyword">this</span>.writer=writer;
     <span class="hljs-keyword">this</span>.price=price;
@@ -942,6 +942,8 @@ Book.prototype.__proto__ = Goods.prototype
 <span class="hljs-comment">// &#x6216;&#x8005;&#x8FD9;&#x6837;&#x4E5F;&#x884C;</span>
 <span class="hljs-comment">// Book.prototype = new Goods()</span>
 <span class="hljs-comment">// &#x601D;&#x8003;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x4E0D;&#x5B8C;&#x7F8E;&#x5730;&#x65B9;</span>
+<span class="hljs-comment">// 1. &#x5C5E;&#x6027;&#x6709;&#x591A;&#x4EFD;</span>
+<span class="hljs-comment">// 2. &#x65E0;&#x6CD5;&#x7ED9;Goods&#x4F20;&#x53C2;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;&#x53C2;&#x6570;&#x53EA;&#x6709;&#x5728;&#x8C03;&#x7528;&#x65F6;&#x624D;&#x77E5;&#x9053;</span>
 
 <span class="hljs-comment">// &#x8BBE;&#x7F6E; Book &#x7684; prototype &#x5C5E;&#x6027;</span>
 Book.prototype.getRMB = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
@@ -1000,7 +1002,7 @@ Book.prototype.getRMB = <span class="hljs-function"><span class="hljs-keyword">f
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"原型链","level":"1.2.1.4","depth":3,"next":{"title":"面向对象和设计模式","level":"1.2.1.5","depth":3,"path":"JS高级/面向对象和设计模式.md","ref":"JS高级/面向对象和设计模式.md","articles":[]},"previous":{"title":"作用域和闭包","level":"1.2.1.3","depth":3,"path":"JS高级/作用域和闭包.md","ref":"JS高级/作用域和闭包.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css"}},"file":{"path":"JS高级/原型链.md","mtime":"2017-05-18T11:05:23.276Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-18T11:07:05.748Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"原型链","level":"1.2.1.4","depth":3,"next":{"title":"面向对象和设计模式","level":"1.2.1.5","depth":3,"path":"JS高级/面向对象和设计模式.md","ref":"JS高级/面向对象和设计模式.md","articles":[]},"previous":{"title":"作用域和闭包","level":"1.2.1.3","depth":3,"path":"JS高级/作用域和闭包.md","ref":"JS高级/作用域和闭包.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css"}},"file":{"path":"JS高级/原型链.md","mtime":"2017-05-18T13:20:05.955Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-18T13:20:12.234Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
